@@ -27,7 +27,8 @@ body {
     margin: auto; }
     .contenedor-formulario .formulario .input-group {
       position: relative;
-      margin-bottom: 32px; }
+      margin-bottom: 32px;
+      /** Ahora selecionamos los elementos input de los 3 tipos */ }
       .contenedor-formulario .formulario .input-group input[type="text"],
       .contenedor-formulario .formulario .input-group input[type="email"],
       .contenedor-formulario .formulario .input-group input[type="password"] {
@@ -68,7 +69,7 @@ body {
           -o-transition: all 0.3s ease;
           transition: all 0.3s ease; }
           .contenedor-formulario .formulario .input-group label.label.active {
-            top: -12;
+            top: -12px;
             font-size: 12px;
             color: #B6B6B6; }
       .contenedor-formulario .formulario .input-group.checkbox label, .contenedor-formulario .formulario .input-group.radio label {
@@ -119,5 +120,21 @@ body {
           padding: 5px 15px;
           background: #303F9F;
           color: #f2f2f2; }
+    .contenedor-formulario .formulario input[type="submit"] {
+      background: #303F9F;
+      border-radius: 1px;
+      border: 2px solid #f2f2f2;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      padding: 15px;
+      width: 100%;
+      font-family: "Roboto", Arial;
+      font-size: 16px;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .contenedor-formulario .formulario input[type="submit"]:hover {
+        background: #1976D2; }
 
 /*# sourceMappingURL=estilos.css.map */
