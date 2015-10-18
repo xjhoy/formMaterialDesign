@@ -40,6 +40,67 @@
 
     };
 
+    var validarRadios = function(){
+        var opciones = document.getElementsByName("sexo"),
+            resultado = false;
+
+        for(i = 0; i < elementos.length; i++){
+
+            if (elementos[i].type == "radio" && elementos[i].name == "sexo"){
+
+                for(var o = 0; o < opciones.length; o++){
+                    if(opciones[o].checked){
+                        resultado = true;
+                        break;
+                    }
+                }
+
+                console.log("test");
+
+                if(resultado == false){
+                    elementos[i].parentNode.className = elementos[i].parentNode.className + " error";
+                    console.log("El campo sexo esta incompleto");
+                    return false;
+
+                }else{
+                    elementos[i].parentNode.className = elementos[i].parentNode.className.replace("error","");
+                    return true;
+                }
+            }
+        }
+
+    };
+
+    var validarCheckbox = function(){
+
+        var opciones = document.getElementsByName("terminos"),
+            resultado = false;
+
+        for(i = 0; i < elementos.length; i++){
+
+            if (elementos[i].type == "checkbox"){
+
+                for(var o = 0; o < opciones.length; o++){
+                    if(opciones[o].checked){
+                        resultado = true;
+                        break;
+                    }
+                }
+
+                if(resultado == false){
+                    elementos[i].parentNode.className = elementos[i].parentNode.className + " error";
+                    console.log("El campo terminos esta incompleto");
+                    return false;
+
+                }else{
+                    elementos[i].parentNode.className = elementos[i].parentNode.className.replace("error","");
+                    return true;
+                }
+            }
+        }
+
+    };
+
     var enviar = function(e){
         if (!validarInputs()){
             console.log("Falto validar los Input");
@@ -51,7 +112,7 @@
             console.log("Falto validar los Checkbox");
             e.preventDefault();
         }else{
-            console.log("Envia");
+            //console.log("Envia");
             // Comentar linea cuando tengamos el formulario listo
             //e.preventDefault();
         }
